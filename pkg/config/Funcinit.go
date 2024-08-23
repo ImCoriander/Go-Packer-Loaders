@@ -5,6 +5,6 @@ func CallBackFunc() []string {
   return fruits
 }
 func VersionFunc() string {
-  Version := "5.0"
+  Version := "1.0.0"
 	return Version
 }
