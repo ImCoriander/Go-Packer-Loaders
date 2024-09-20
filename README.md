@@ -1,6 +1,5 @@
 # Go-Packer-Loaders
-快速Go建你的免杀项目
-
+帮你快速Go建你的免杀项目
 
 
 # Example
@@ -32,3 +31,17 @@ func main() {
 }
 
 ```
+
+
+# Help
+
+## 一、初始化环境
+```
+go mod init main
+```
+```
+go mod tidy
+```
+
+## 二、在项目中选择加载方式
+例如上文提到：EnumPwrSchemes，如果需要用其他的加载方式，可直接更换名字！！！
